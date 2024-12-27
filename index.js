@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const crypto = require('crypto'); // For generating a secret key
 const multer = require("multer");
 const dotenv = require("dotenv");
-const ipadd = '0.0.0.0'
+const ipadd = '192.168.29.189'
 require('dotenv').config(); 
 
 const teamRoutes = require('./teampage')
@@ -76,7 +76,7 @@ app.use((err, req, res, next) => {
 });
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, './uploads'); // Directory to store uploaded files
+        cb(null, '../image'); // Directory to store uploaded files
     },
     filename: (req, file, cb) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
@@ -386,7 +386,7 @@ app.get('/view_contactform', async (req, res) => {
 
 
 
-app.listen(8000, process.env.IPADD, () => {
-    console.log(`Server connected on port ${process.env.IPADD}:8000`);
+app.listen(8000, ipadd, () => {
+    console.log('Server connected on port 192.168.29.189:8000');
     // console.log('Server connected on port 192.168.29.189:8000');
 });
