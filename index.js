@@ -386,7 +386,7 @@ app.get('/view_contactform', async (req, res) => {
 
 
 
-app.listen(8000, ipadd, () => {
-    console.log('Server connected on port 192.168.29.189:8000');
+app.listen(8000, process.env.IPADD, () => {
+    console.log(`Server connected on port ${process.env.IPADD}:8000`);
     // console.log('Server connected on port 192.168.29.189:8000');
 });
