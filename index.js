@@ -7,7 +7,7 @@ const crypto = require('crypto'); // For generating a secret key
 const multer = require("multer");
 const dotenv = require("dotenv");
 const ipadd = '192.168.29.189'
-require('dotenv').config(); 
+require('dotenv').config();
 
 const teamRoutes = require('./teampage')
 
@@ -386,7 +386,7 @@ app.get('/view_contactform', async (req, res) => {
 
 
 
-app.listen(8000, ipadd, () => {
+app.listen(8000, "0.0.0.0", () => {
     console.log('Server connected on port 192.168.29.189:8000');
     // console.log('Server connected on port 192.168.29.189:8000');
 });
