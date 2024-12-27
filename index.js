@@ -386,7 +386,7 @@ app.get('/view_contactform', async (req, res) => {
 
 
 
-app.listen(8000, "0.0.0.0", () => {
+app.listen(8000, () => {
     console.log('Server connected on port 192.168.29.189:8000');
     // console.log('Server connected on port 192.168.29.189:8000');
 });
